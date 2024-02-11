@@ -8,7 +8,7 @@ import concurrent.futures
 def send_request(url):
     try:
         response = requests.get(url)
-        print(f"Response from {url}: {response.status_code}")
+        print(f"Response from {url}: {response.status_code}, {response.text}")
     except Exception as e:
         print(f"Failed to send request to {url}: {str(e)}")
 
